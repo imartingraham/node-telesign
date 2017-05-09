@@ -3,7 +3,7 @@
 var phoneId = require('./lib/phoneId');
 var verify = require('./lib/verify');
 var teleBureau = require('./lib/teleBureau');
-
+var sms = require('./lib/sms');
 /* CONSTRUCTOR */
 
 (function () {
@@ -55,6 +55,7 @@ var teleBureau = require('./lib/teleBureau');
     TeleSign.phoneId.setup(params);
     TeleSign.verify.setup(params);
     TeleSign.teleBureau.setup(params);
+    Telesign.sms = sms.setup(params);
 
     return this;
   };
@@ -62,7 +63,7 @@ var teleBureau = require('./lib/teleBureau');
   TeleSign.phoneId = phoneId;
   TeleSign.verify = verify;
   TeleSign.teleBureau = teleBureau;
-
+  Telesign.sms = sms;
   /* NPM EXPORT */
 
   if (typeof module === 'object' && module.exports) {
