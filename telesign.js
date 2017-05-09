@@ -55,7 +55,7 @@ var sms = require('./lib/sms');
     TeleSign.phoneId.setup(params);
     TeleSign.verify.setup(params);
     TeleSign.teleBureau.setup(params);
-    TeleSign.sms = sms.setup(params);
+    TeleSign.sms.setup(params);
 
     return this;
   };
