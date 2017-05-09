@@ -55,7 +55,7 @@ var sms = require('./lib/sms');
     TeleSign.phoneId.setup(params);
     TeleSign.verify.setup(params);
     TeleSign.teleBureau.setup(params);
-    Telesign.sms = sms.setup(params);
+    TeleSign.sms = sms.setup(params);
 
     return this;
   };
@@ -63,7 +63,7 @@ var sms = require('./lib/sms');
   TeleSign.phoneId = phoneId;
   TeleSign.verify = verify;
   TeleSign.teleBureau = teleBureau;
-  Telesign.sms = sms;
+  TeleSign.sms = sms;
   /* NPM EXPORT */
 
   if (typeof module === 'object' && module.exports) {
